@@ -1,0 +1,6 @@
+wget -q https://aka.ms/downloadazcopy-v10-linux >/dev/null
+tar -xf downloadazcopy-v10-linux >/dev/null && rm -rf downloadazcopy-v10-linux
+cp ~/azcopy_linux_amd64_*/azcopy .
+url='https://msrashaiteamdrive.blob.core.windows.net/teamdrive/jinchaoli'
+sasToken='sp=racwdli&st=2022-07-08T03:13:20Z&se=2022-11-08T11:13:20Z&spr=https&sv=2021-06-08&sr=c&sig=gHaVhpthkgh1KTEiU%2FHLak31phy5Z25G7bLyUNGninM%3D'
+azcopy copy "${url}/Datasets/?${sasToken}" . --recursive
